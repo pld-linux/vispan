@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Vispan - VIrus and SPam ANalyser
-Summary(pl):	Vispan - analizator wirsów i spamu
+Summary(pl):	Vispan - analizator wirusów i spamu
 Name:		vispan
 Version:	2.0.2
 Release:	0.9
