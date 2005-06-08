@@ -56,7 +56,8 @@ install vispan.css $RPM_BUILD_ROOT/var/lib/vispan
 cat <<'EOF' > $RPM_BUILD_ROOT/etc/cron.d/%{name}
 # This is the cron entry to run the Vispan analysis script every 10 minutes.
 MAILTO=root
-*/10 stats %{_bindir}/%{name}
+*/10 * * * * stats %{_bindir}/%{name}
+# vim:syn=crontab
 EOF
 
 %clean
