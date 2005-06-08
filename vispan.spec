@@ -1,5 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Vispan - VIrus and SPam ANalyser
+Summary(pl):	Vispan - Analizator wirsów i spamu
 Name:		vispan
 Version:	2.0.2
 Release:	0.9
@@ -24,6 +25,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This program analyses the mail log file entries created by the
 MailScanner program written by Julian Field.
+
+%description -l pl
+Ten program analizuje pliki logów stworzonych przez program
+MailScanner.
 
 %prep
 %setup -q -n Vispan-%{version}
