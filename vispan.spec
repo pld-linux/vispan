@@ -3,7 +3,7 @@ Summary:	Vispan - VIrus and SPam ANalyser
 Summary(pl):	Vispan - analizator wirusów i spamu
 Name:		vispan
 Version:	2.0.2
-Release:	0.9
+Release:	0.11
 Epoch:		0
 License:	GPL v2
 Group:		Applications
@@ -11,6 +11,7 @@ Source0:	http://www.while.homeunix.net/mailstats/Vispan-%{version}.tar.gz
 # Source0-md5:	62ff80fced226287ea49f8cb897ede71
 Patch0:		%{name}-install.patch
 URL:		http://www.while.homeunix.net/mailstats/
+BuildRequires:	perl-libwww
 BuildRequires:	perl-GD-Graph
 BuildRequires:	perl-Mail-Sendmail
 BuildRequires:	perl-Net-CIDR
@@ -61,7 +62,7 @@ install vispan.css $RPM_BUILD_ROOT/var/lib/vispan
 cat <<'EOF' > $RPM_BUILD_ROOT/etc/cron.d/%{name}
 # This is the cron entry to run the Vispan analysis script every 10 minutes.
 MAILTO=root
-*/10 * * * * stats %{_bindir}/%{name}
+*/10 * * * * stats %{_bindir}/Vispan
 # vim:syn=crontab
 EOF
 
